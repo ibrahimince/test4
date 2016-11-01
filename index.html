@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>webRTC Test</title>
+
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="DetectRTC.js"></script>
+
+</head>
+<body>
+<!-- <div class="container">
+
+<ul>
+
+<li><p id="camera"></p></li>
+<li><p id="mic"></p></li>
+
+
+</ul>
+<span id="skype"></span>
+<span id="progress"></span>
+
+</div> -->
+
+
+    <form>
+    <h1>Skype Connection Check</h1>
+    <ul>
+       <li class="lii"> <p id="camera" size="12">
+          
+
+        </p>
+        </li>
+        <li class="lii"><p id="mic" size="25">
+        
+
+        </p></li>
+
+        <p>For voice calls we recommend a broadband connection with least 4, Mbps. <span>to see your internet connection please see the numbers shown below the page.</span></p>
+
+
+<!--         <li><p id="progress">
+          
+
+
+        </p></li>
+        <li><p id="skype">
+    
+
+
+        </p></li> -->
+
+<!--         <p>
+            <input type="submit" value="SUBMIT" id="submit">
+        </p> -->
+<!--         <div class="center">
+        <div id="logo"> <span class="speedometer"></span>
+    <span class="needle"></span>
+
+</div>
+</div> -->
+
+    <iframe src="https://fast.com/da/" scrolling="no"></iframe>
+    </form>
+
+
+
+<script type="text/javascript">
+
+
+
+
+DetectRTC.load(function() {
+
+
+if ( DetectRTC.hasWebcam) {
+    cam = "You have available camera in your machine.";
+} else {
+    cam = "You dont have available camera in your machine.";
+    document.getElementById("camera").style.color = "#ff0000";
+    document.getElementsByTagName("li")[0].removeAttribute("class");
+  /*  document.getElementByID("lii").style.visibilty="hidden";*/
+} 
+if ( DetectRTC.hasMicrophone) {
+    microphone = "You have available microphone in your machine.";
+} else {
+    microphone = "You dont have available microphone in your machine.";
+    document.getElementById("mic").style.color = "#ff0000";
+    /*document.getElementById("lii").style.display='none';*/
+     document.getElementsByTagName("li")[1].removeAttribute("class");
+       
+} 
+ document.getElementById("camera").innerHTML = cam;
+ document.getElementById("mic").innerHTML = microphone;
+/*document.getElementById('logo').style.visibility = "hidden";*/
+
+
+    });
+/*setTimeout(function () { $('logo').fadeOut('fast'); }, 1000);
+$("logo").hide(1000);*/
+
+
+
+
+//JUST AN EXAMPLE, PLEASE USE YOUR OWN PICTURE!
+/*var imageAddr = "https://upload.wikimedia.org/wikipedia/commons/7/7a/Salzburg_from_Gaisberg_big_version.jpg"; 
+var downloadSize = 17044714; //bytes
+
+
+
+
+
+function ShowProgressMessage(msg) {
+    if (console) {
+        if (typeof msg == "string") {
+            console.log(msg);
+        } else {
+            for (var i = 0; i < msg.length; i++) {
+                console.log(msg[i]);
+            }
+        }
+    }
+    var oProgress = document.getElementById("progress");
+    if (oProgress) {
+        var actualHTML = (typeof msg == "string") ? msg : msg.join("<br />");
+        oProgress.innerHTML = actualHTML;
+    }
+}
+function InitiateSpeedDetection() {
+    ShowProgressMessage("Testing your internet connection quality...");
+    window.setTimeout(MeasureConnectionSpeed, 1);
+};    
+if (window.addEventListener) {
+    window.addEventListener('load', InitiateSpeedDetection, false);
+} else if (window.attachEvent) {
+    window.attachEvent('onload', InitiateSpeedDetection);
+}
+function MeasureConnectionSpeed() {
+    var startTime, endTime;
+    var download = new Image();
+    download.onload = function () {
+        endTime = (new Date()).getTime();
+        showResults();
+    }    
+    download.onerror = function (err, msg) {
+        ShowProgressMessage("Please check your internet connection!");
+    }    
+    startTime = (new Date()).getTime();
+    var cacheBuster = "?nnn=" + startTime;
+    download.src = imageAddr + cacheBuster;
+    function showResults() {
+        var duration = (endTime - startTime) / 1000;
+        var bitsLoaded = downloadSize * 8;
+        var speedBps = (bitsLoaded / duration).toFixed(2);
+        var speedKbps = (speedBps / 1024).toFixed(2);
+        var speedMbps = (speedKbps / 1024).toFixed(2);
+        ShowProgressMessage([
+            "Your connection speed is:", 
+            speedBps + " bps", 
+            speedKbps + " kbps", 
+            speedMbps + " Mbps"
+        ]);
+        if (speedMbps >8.00){
+        document.getElementById('skype').innerHTML ='The bandwidth requirement for Skype for Business passed...';
+}
+        else{
+         document.getElementById('skype').innerHTML ='The bandwidth requirement for Skype for Business did not pass....';
+            document.getElementById("skype").style.color = "#ff0000";}
+             document.getElementById('logo').style.visibility = "hidden";
+    }
+}*/
+</script>
+<script src="script.js"></script>
+</body>
+</html>

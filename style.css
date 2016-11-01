@@ -1,0 +1,158 @@
+body {
+  background: #384047;
+  font-family: sans-serif;
+  font-size: 10px
+}
+form {
+  background: #fff;
+  padding: 4em 4em 2em;
+  max-width: 600px;
+  margin: 100px auto 0;
+  box-shadow: 0 0 1em #222;
+  border-radius: 5px;
+}
+p {
+  margin: 0 0 3em 0;
+  position: relative;
+  font-size: 20px;
+  color: #000;
+  /*background-color: #A9A9A9;*/
+  padding: 10px;
+}
+
+
+p:hover
+{
+        background:#87CEEB;
+         -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+        /*box-shadow: inset 0 0 0 25px #53a7ea;*/
+        background-
+}
+
+
+h1{
+  text-align: center;
+    padding-top: 10px;
+    height:70px;
+   margin-top: -35px;  
+  margin-right: -32px;
+  margin-left: -35px;
+    background-color: #00aff0;
+    background-image: url("2.png");
+        background-size: 100px 85px;
+    background-repeat: no-repeat;
+
+}
+.lii #camera{
+  
+  background-image: url("ok.png");
+  background-repeat: no-repeat;
+  background-size: 40px 45px;
+  background-position: right;
+}
+.lii #mic{
+  
+  background-image: url("ok.png");
+  background-repeat: no-repeat;
+  background-size: 40px 45px;
+  background-position: right;
+}
+label {
+  display: block;
+  font-size: 1.6em;
+  margin: 0 0 .5em;
+  color: #333;
+}
+input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  outline: none
+}
+span{
+  color:red;
+}
+/*span {
+  border-radius: 5px;
+  display: block;
+  font-size: 1.3em;
+  text-align: center;
+  position: absolute;
+  background: #2F558E;
+  left: 105%;
+  top: 25px;
+  width: 160px;
+  padding: 7px 10px;
+  color: #fff;
+}
+span:after {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-right-color: #2F558E;
+  border-width: 8px;
+  margin-top: -8px;
+}*/
+.center{
+  /*text-align: center;*/
+}
+#logo {
+   /*   text-align: center;*/
+    display: inline-block;
+    position: relative;
+
+}
+#logo .speedometer {
+      /*text-align: center;*/
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    border: 20px solid #000;
+    border-right: 20px solid white;
+    border-bottom: 20px solid white;
+    -webkit-transform: rotate(45deg);
+    display: inline-block;
+
+}
+#logo .needle {
+    width: 5px;
+    height: 50px;
+    background: #999999;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    display: inline-block;
+    left: 57px;
+    position: absolute;
+    top: 10px;
+    -webkit-animation:move 14s infinite;
+    transform:rotate(0deg);
+    transform-origin:bottom;
+}
+@-webkit-keyframes move {
+    0% {
+        transform:rotate(-90deg);
+    }
+    50% {
+        transform:rotate(90deg);
+    }
+    100% {
+        transform:rotate(-90deg);
+    }
+}
+iframe {
+  height:220px;
+  width: 100%;
+  resize: both;
+ /* overflow: auto;*/
+  border-style: none;
+}
